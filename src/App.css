@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reminder {
+  min-width: 380px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todo-list__image {
+  margin: auto;
+  /* width: 100%; */
+  height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .todo-list {
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .todo-list .task-item .task-item__icon {
+    display: none;
+  }
+
+  .todo-list .task-list {
+    display: flex;
+    height: 100vh;
+    background-color: #e6e6e6;
+    padding: 25px 10px;
+    border: 1px solid lightgray;
+    position: absolute;
+    transform: translateX(0px);
+    width: 25%;
+    position: absolute;
+  }
+
+  .todo-list .task-item {
+    position: absolute;
+    left: 25%;
+    min-width: 75%;
+  }
+
+  .task-item__text {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+    font-size: 1.25rem;
+  }
+
+  .task-item__label {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 10px;
+    transition: 0.2s ease all;
+  }
+
+  input:focus ~ .task-item__label,
+  input:not(:focus):valid ~ .task-item__label {
+    top: 0px;
+    left: 10px !important;
+    font-size: 13px;
+    opacity: 1;
+  }
+
+  .task-list__name:hover {
+    color: white;
+    background-color: #bdbdbd;
+  }
+
+  .task-list__text {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+    font-size: 1.25rem;
+  }
+
+  .task-list__label {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 10px;
+    transition: 0.2s ease all;
+  }
+
+  input:focus ~ .task-list__label,
+  input:not(:focus):valid ~ .task-list__label {
+    top: 0px;
+    left: 10px !important;
+    font-size: 13px;
+    opacity: 1;
   }
 }

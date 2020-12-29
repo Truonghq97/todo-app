@@ -1,0 +1,114 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 170px;
+    height: 100vh;
+    background-color: #e6e6e6;
+    padding: 25px 10px;
+    border: 1px solid lightgray;
+    position: absolute;
+    transform: translateX(-500px);
+    width: 30%;
+    transition: 2s all;
+  }
+  
+  .click {
+    position: absolute;
+    transform: translateX(0px);
+    transition: 1s all;
+  }
+  
+  .task-list__content {
+    height: 100%;
+  }
+  
+  .task-list__name {
+    border-bottom: 1px solid lightgray;
+    background-color: #f2f2f2;
+  }
+  
+  .active {
+    background-color: #848484;
+  }
+  
+  .task-list__name:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .task-list__name:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .task-list__name > h4 {
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    color: #2e2e2e;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0
+  }
+  
+  .task-list__icon {
+    font-size: 30px;
+    padding: 8px;
+    color: white;
+  }
+  
+  .option__icon {
+    border-radius: 50%;
+    background-color: #2e64fe;
+    padding: 5px;
+  }
+  
+  .task-list__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #0080ff;
+    padding: 20px;
+    position: relative;
+    bottom: 44px;
+    color: #a4a4a4;
+    margin-top: 70px;
+    cursor: pointer;
+  }
+  
+  .task-list__add > p {
+    margin: 0 10px;
+  }
+  
+  .task-list__text {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+    font-size: 1.25rem;
+    width: 100%;
+  }
+  
+  .task-list__text:focus {
+    border-color: #0080ff;
+    border-width: medium medium 2px;
+  }
+  
+  .task-list__label {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    /* left: 10px; */
+    transition: 0.2s ease all;
+  }
+  
+  input:focus ~ .task-list__label,
+  input:not(:focus):valid ~ .task-list__label {
+    top: 0px;
+    left: 5px;
+    font-size: 13px;
+    opacity: 1;
+  }
+  

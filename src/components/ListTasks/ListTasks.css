@@ -1,0 +1,139 @@
+.task-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #f2f2f2;
+    height: 100vh;
+  }
+  
+  .task-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: #0080ff;
+    padding: 20px;
+  }
+  
+  .task-item__icon > p {
+    padding-left: 10px;
+    margin-bottom: 0px;
+  }
+  
+  .task-item__header {
+    display: flex;
+    align-items: center;
+    color: #0080ff;
+    padding: 20px;
+    font-size: 2rem;
+    justify-content: flex-end;
+  }
+
+  .header-name h3 {
+    color: #0080ff;
+    margin: 0px;
+  }
+  
+  .header-name {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.5;
+  }
+  
+  .header-name > h3 > span {
+    font-weight: 100;
+  }
+  
+  .header-option {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.5;
+  }
+  
+  .option-icon {
+    border-radius: 50%;
+    background-color: lightgray;
+    padding: 5px;
+    margin-right: 15px;
+  }
+  
+  .task-item__content {
+    padding: 20px 30px;
+    height: 100%;
+  }
+  
+  .content-task {
+    display: flex;
+  }
+  
+  .task-text {
+    margin-left: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  
+  .content-task > input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+  }
+  
+  .icon-delete {
+    font-size: 2rem;
+    color: #0080ff;
+  }
+  
+  .task-item__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #0080ff;
+    padding: 20px;
+    position: relative;
+    bottom: 70px;
+    color: #a4a4a4;
+    margin-top: 70px;
+    cursor: pointer;
+  }
+  
+  .task-item__addbtn p {
+    padding-left: 10px;
+  }
+  
+  .task-item__add > p {
+    margin: 0 10px;
+  }
+  
+  .task-item__text {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+    font-size: 1.25rem;
+  }
+  
+  .task-item__text:focus {
+    border-color: #0080ff;
+    border-width: medium medium 2px;
+  }
+  
+  .task-item__label {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    transition: 0.2s ease all;
+  }
+  
+  input:focus ~ .task-item__label,
+  input:not(:focus):valid ~ .task-item__label {
+    top: 0px;
+    left: 230px;
+    font-size: 13px;
+    opacity: 1;
+  }
+  
